@@ -7,7 +7,7 @@ public class Main
             System.out.println(i+"."+" For Loop");
         }
 
-        // For each Loop (We use it for Arrays)
+        // For-each Loop (We use it for Arrays)
         String[] names = {"Ali","Hasan","Max"};
         for(String i : names){
             System.out.println(i);
