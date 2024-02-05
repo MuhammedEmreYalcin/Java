@@ -1,0 +1,27 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int [] numbers = new int [] {0,2,3,5,8};
+        int searching = 7;
+        boolean isThere = false;
+
+        for (int number : numbers)
+        {
+            if (number == searching)
+            {
+                isThere = true;
+                break;
+            }
+        }
+
+        if (isThere)
+            {
+                System.out.println("The Number You Are Looking for is in the Array");
+            }
+            else
+            {
+                System.out.println("The Number You Are Looking for is not in the Array");
+            }
+    }
+}
