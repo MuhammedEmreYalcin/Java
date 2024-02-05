@@ -1,0 +1,26 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+        char Harf = 'A';
+
+        switch (Harf)
+        {
+            case 'A':
+            case 'O':
+            case 'I':
+            case 'U':
+                System.out.println(Harf + ":" + "Kalın Sesli Harf");
+                break;
+
+            case 'E':
+            case 'İ':
+            case 'Ö':
+            case 'Ü':
+                System.out.println(Harf + ":" + " Kalın İnce Harf");
+                break;
+            default:
+                System.out.println("İnce Sesli Harf");
+        }
+    }
+}
