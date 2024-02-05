@@ -1,0 +1,6 @@
+public class Baselogger {
+    public void log (String massage)
+    {
+        System.out.println("Default Logger: "+ massage);
+    }
+}
