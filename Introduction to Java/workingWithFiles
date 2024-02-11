@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        writeFile();
+        readFile();
+    }
+
+    public static void createFile()
+    {
+        File file = new  File("C:\\Users\\PC\\Desktop\\Emre\\java.demos\\Files\\student.txt");
+        try {
+            if (file.createNewFile()) {
+                System.out.println("File Created");
+            } else {
+                System.out.println("File exists");
+            }
+
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void readFile(){
+        File file = new  File("C:\\Users\\PC\\Desktop\\Emre\\java.demos\\Files\\student.txt");
+        try {
+            Scanner myreader = new Scanner(file);
+            while (myreader.hasNextLine()){
+                String line = myreader.nextLine();
+                System.out.println(line);
+            }
+            myreader.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void writeFile(){
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter ("C:\\Users\\PC\\Desktop\\Emre\\java.demos\\Files\\student.txt",true));
+            writer.newLine();
+            writer.write("Ahmet");
+            writer.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
